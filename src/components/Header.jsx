@@ -38,9 +38,9 @@ export default function Header() {
   return (
     <>
       <header
-        className="w-full h-[4.5rem] flex items-center py-2 fixed z-[25] border-b-[1px] bg-soothing_black/80 border-main_primary/30 backdrop-blur-xl shadow-[0_0_15px_rgba(0,240,255,0.1)] transition-all duration-300 ease-in-out"
+        className="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] md:w-[90%] max-w-5xl h-[4rem] flex items-center py-2 z-[50] rounded-full border border-white/10 bg-white/5 backdrop-blur-2xl shadow-lg transition-all duration-300 ease-in-out supports-[backdrop-filter]:bg-white/5"
         // style={{ hidden:block
-        style={{ transform: isVisible ? "translateY(0)" : "translateY(-100%)" }}
+        style={{ transform: isVisible ? "translate(-50%, 0)" : "translate(-50%, -150%)" }}
       >
         <div
           className="ml:2 md:ml-4 z-[26]"

@@ -4,94 +4,136 @@ import { gsap } from "gsap";
 import { siteConfig } from "@/config/site";
 
 function Hero() {
-  const title = useRef(null);
-  const subtitle = useRef(null);
-  const subtitle2 = useRef(null);
-  const date = useRef(null);
-  const render = useRef(null);
+  /* ----------------------------- Refs ----------------------------- */
+  const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
+  const subtitle2Ref = useRef(null);
+  const dateRef = useRef(null);
+  const videoRef = useRef(null);
 
+  /* --------------------------- Animations -------------------------- */
   useEffect(() => {
-    //loop the video from 0:03 to 0:06
-    if (render.current) {
-      render.current.currentTime = 0.5;
-      render.current.addEventListener("timeupdate", function () {
-        if (this.currentTime > 9) {
-          this.currentTime = 0.5;
+    /* Video loop from 0.5s → 9s */
+    if (videoRef.current) {
+      const video = videoRef.current;
+      video.currentTime = 0.5;
+
+      const handleTimeUpdate = () => {
+        if (video.currentTime > 9) {
+          video.currentTime = 0.5;
         }
-      });
+      };
+
+      video.addEventListener("timeupdate", handleTimeUpdate);
+
+      return () => {
+        video.removeEventListener("timeupdate", handleTimeUpdate);
+      };
     }
-    gsap.fromTo(
-      title.current,
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1.5, delay: 0.5 }
-    );
-    gsap.fromTo(
-      subtitle.current,
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1.5, delay: 1 }
-    );
-    gsap.fromTo(
-      subtitle2.current,
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1.5, delay: 2.5 }
-    );
-    gsap.fromTo(
-      date.current,
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1.5, delay: 3 }
-    );
   }, []);
 
+  useEffect(() => {
+    const animations = [
+      {
+        ref: titleRef,
+        delay: 0.5,
+      },
+      {
+        ref: subtitleRef,
+        delay: 1,
+      },
+      {
+        ref: subtitle2Ref,
+        delay: 2.5,
+      },
+      {
+        ref: dateRef,
+        delay: 3,
+      },
+    ];
+
+    animations.forEach(({ ref, delay }) => {
+      gsap.fromTo(
+        ref.current,
+        { opacity: 0, y: 100 },
+        { opacity: 1, y: 0, duration: 1.5, delay }
+      );
+    });
+  }, []);
+
+  /* ----------------------------- JSX ------------------------------- */
   return (
-    <div className="hero relative xl:hidden py-8 h-fit flex flex-col uppercase justify-center">
+    <div className="hero relative xl:hidden h-fit flex flex-col">
+      {/* Background Video */}
       <video
-        ref={render}
+        ref={videoRef}
         src="/render.mp4"
-        loop
         autoPlay
         muted
-        className="absolute top-0 left-0 w-full h-full object-cover bg-slate-300 opacity-50"
-      ></video>
+        loop
+        className="absolute inset-0 w-full h-full object-cover"
+      />
 
-      <div className="text-white flex flex-col pt-[8rem] uppercase font-extrabold md:ml-[1rem] lg:ml-[2rem] px-5 ">
-        <h1 ref={title} className="font-chakra sm:text-2xl opacity-0">
-          {siteConfig.fullCollegeName} Presents
+      {/* -------------------------- Text Section -------------------------- */}
+      <div className="relative z-10 w-full pt-[8rem] pb-4 px-5 flex flex-col bg-black mix-blend-multiply">
+        <h1
+          ref={titleRef}
+          className="font-chakra sm:text-2xl opacity-0 tracking-widest text-white font-extrabold uppercase md:ml-4 lg:ml-8"
+        >
+          STACS PRESENTS
         </h1>
-        <div ref={subtitle} className="font-clash flex flex-wrap opacity-0">
-          <span className="text-[4.5rem] sm:text-[6.5rem] md:text-[9rem] lg:text-[9rem]">
+
+        <div
+          ref={subtitleRef}
+          className="font-clash flex flex-wrap opacity-0 drop-shadow-2xl md:ml-4 lg:ml-8"
+        >
+          <span className="text-[3.5rem] sm:text-[6rem] md:text-[9rem] lg:text-[12rem] text-white font-extrabold uppercase">
             {siteConfig.eventName}
           </span>
-          <span className="text-main_primary relative top-[-3rem] font-chakra text-stroke-cyan text-[7rem] md:text-[9rem]">
+
+          <span className="text-white relative top-[-3rem] font-chakra text-[7rem] md:text-[9rem] opacity-80 font-extrabold">
             {siteConfig.eventYear}
           </span>
         </div>
+
         <span
-          ref={subtitle2}
-          className="opacity-0 relative top-[-5rem] text-[3.5rem] sm:text-[5rem] md:text-[7rem] font-clash"
+          ref={subtitle2Ref}
+          className="opacity-0 relative top-[-5rem] text-[3.5rem] sm:text-[5rem] md:text-[7rem] font-clash text-white/80 font-extrabold uppercase md:ml-4 lg:ml-8"
         >
           {siteConfig.tagline}
         </span>
       </div>
 
-      <div
-        ref={date}
-        className="relative md:ml-10 opacity-0 flex flex-col font-bold bg-white w-fit text-xl rounded-md text-black p-2 pr-8 ml-[1.5rem] md:text-3xl  z-10"
-      >
-        <span className="font-chakra">
-          {siteConfig.eventYear} <span className="font-clash">{siteConfig.eventDate.month}</span>
-        </span>
-        <span className="flex gap-2 text-[2rem] font-chakra font-bold">
-          {siteConfig.eventDate.dates.map((d, i) => (
-            <span key={i} className="flex"><span className="mr-1">{d.day}</span><b className="text-[16px]">{d.suffix}</b></span>
-          ))}
-        </span>
-        <Image
-          src="/edgeTriangle.png"
-          width={30}
-          height={30}
-          alt="edgetriangle"
-          className="absolute bottom-[-1px] right-[-1px]"
-        />
+      {/* -------------------------- Date Section -------------------------- */}
+      <div className="relative z-10 w-full pb-8 px-5 bg-black">
+        <div
+          ref={dateRef}
+          className="relative opacity-0 flex flex-col font-bold bg-white w-fit text-black p-2 pr-8 rounded-md ml-6 md:ml-10 text-xl md:text-3xl"
+        >
+          <span className="font-chakra">
+            {siteConfig.eventYear}{" "}
+            <span className="font-clash">
+              {siteConfig.eventDate.month}
+            </span>
+          </span>
+
+          <span className="flex gap-2 text-[2rem] font-chakra font-bold">
+            {siteConfig.eventDate.dates.map((d, i) => (
+              <span key={i} className="flex">
+                <span className="mr-1">{d.day}</span>
+                <b className="text-[16px]">{d.suffix}</b>
+              </span>
+            ))}
+          </span>
+
+          <Image
+            src="/edgeTriangle.png"
+            width={30}
+            height={30}
+            alt="edge triangle"
+            className="absolute bottom-[-1px] right-[-1px]"
+          />
+        </div>
       </div>
     </div>
   );

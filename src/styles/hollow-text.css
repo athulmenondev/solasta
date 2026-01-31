@@ -1,0 +1,34 @@
+/* Hollow text effect - video shows through text */
+.hollow-text-container {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+
+.hollow-text-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-mask-image: var(--text-mask);
+  mask-image: var(--text-mask);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.hollow-text-content {
+  position: relative;
+  background: linear-gradient(to right, white, white);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 15rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}

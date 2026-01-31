@@ -4,10 +4,10 @@ import { siteConfig } from "@/config/site";
 function Clock() {
   return (
     <div className="w-screen flex justify-center my-2 lg:mb-8">
-      <div className="md:border border-main_primary/30 backdrop-blur-sm shadow-[0_0_15px_rgba(0,240,255,0.05)] xl:mt-[8rem] pb-5 xl:pb-10 xl w-[100] xl:w-[35rem] flex flex-col justify-center items-center z-[10] text-white text-[3rem] md:text-[4rem] tracking-[1rem] font-clash bg-black/50">
+      <div className="md:border border-white/10 rounded-[3rem] backdrop-blur-xl shadow-2xl xl:mt-[8rem] pb-5 xl:pb-10 xl w-[100] xl:w-[35rem] flex flex-col justify-center items-center z-[10] text-white text-[3rem] md:text-[4rem] tracking-[1rem] font-clash bg-white/5">
         <Countdown
           date={new Date(siteConfig.targetDate)}
-          className="text-[2rem] xl:text-[4rem] text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400"
+          className="text-[2rem] xl:text-[4rem] text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 drop-shadow-sm"
         />
 
         <div className="text-[.8rem] md:text-lg bottom-0 relative -tracking-tight">

@@ -59,7 +59,7 @@ export default function RitModel() {
         {itemList.map((item) => (
           <article
             key={item.id}
-            class="flex-card-container bg-cover bg-no-repeat border-[1px] border-white/10 hover:border-main_primary hover:shadow-[0_0_20px_rgba(0,240,255,0.2)] transition-all duration-500 ease-in-out"
+            className="flex-card-container bg-cover bg-no-repeat rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-md shadow-xl hover:shadow-2xl hover:border-white/20 transition-all duration-500 ease-out"
             style={{
               backgroundImage: `url(${item.image})`,
             }}

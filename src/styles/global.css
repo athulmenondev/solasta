@@ -2,8 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Army';
+  src: url('/fonts/Army.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --soothing-black: "#0E1111";
+}
+
+body {
+  background: radial-gradient(circle at 15% 50%, #1a1a2e, #000000);
+  min-height: 100vh;
 }
 
 html {
@@ -73,9 +85,10 @@ progress::-webkit-progress-value {
 }
 
 .vidDarpan {
-  color: #ffffff;
+  color: transparent;
   letter-spacing: -2.6vw;
   text-align: center;
+  -webkit-text-stroke: 3px #ffffff;
 }
 
 .video-copy {
@@ -86,9 +99,13 @@ progress::-webkit-progress-value {
   right: 0;
   font-size: 47vw;
   margin-left: -3vw;
-  background-color: rgb(0, 0, 0);
+  background-color: transparent; /* Removed black background */
   user-select: none;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal; /* Removed multiply */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
 }
 
 .teamCard::before {

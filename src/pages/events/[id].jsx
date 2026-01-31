@@ -193,9 +193,7 @@ export async function getStaticPaths() {
 
   const paths = [];
   objectData.posts.forEach((post) => {
-    post.forEach((post) => {
-      paths.push({ params: { id: post.id.toString() } });
-    });
+    paths.push({ params: { id: post.id.toString() } });
   });
 
   return {
@@ -211,7 +209,7 @@ export async function getStaticProps(context) {
 
   const id = context.params.id;
 
-  const post = objectData.posts.flat().find((post) => post.id == id);
+  const post = objectData.posts.find((post) => post.id == id);
 
   return {
     props: {

@@ -50,7 +50,7 @@ export default function Contact(props) {
               </h2>
               <span className="text-2xl font-chakra">
                 Ph no :{" "}
-                <Link href="tel:9447789825" className="hover:text-main_primary">
+                <Link href={`tel:${post.ph}`} className="hover:text-main_primary">
                   {post.ph}
                 </Link>
               </span>
@@ -70,7 +70,29 @@ export async function getStaticProps() {
   const jsonData = await fsPromises.readFile(filePath);
   const objectData = JSON.parse(jsonData);
 
+  const posts = [];
+  const coordinatorTab = objectData.tabs.find((tab) => tab.name === "Coordinator");
+  
+  if (coordinatorTab) {
+    coordinatorTab.sections.forEach((section) => {
+      section.members.forEach((member) => {
+        // Only include members if needed, or all of them. 
+        // Ideally only those with phone numbers if this is a contact page? 
+        // But let's include all as per "all people working".
+        posts.push({
+          id: member.id,
+          title: member.post,
+          sub: section.name,
+          name: member.name,
+          ph: member.ph || "N/A"
+        });
+      });
+    });
+  }
+
   return {
-    props: objectData,
+    props: {
+      posts,
+    },
   };
 }

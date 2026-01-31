@@ -10,6 +10,7 @@ module.exports = {
         chakra: ["var(--font-chakra)"],
         ibm: ["var(--font-ibm)"],
         bebas: ["var(--font-bebas)"],
+        army: ["Army", "sans-serif"],
       },
       colors: {
         soothing_black: "#050510", // Deep Space Black

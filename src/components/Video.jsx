@@ -43,10 +43,17 @@ function Video() {
   }, []);
 
   return (
-    <div ref={triggerRef} className="video-section hidden xl:block">
-      <video ref={videoRef} src="/marvel.mp4" autoPlay muted></video>
-      <div className="video-copy">
-        <h1 ref={textRef} className="vidDarpan font-bebas">
+    <div ref={triggerRef} className="video-section hidden xl:block relative w-full h-screen bg-black overflow-hidden">
+      <video 
+        ref={videoRef} 
+        src="/marvel.mp4" 
+        autoPlay 
+        muted 
+        loop
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      ></video>
+      <div className="video-copy absolute inset-0 z-10 bg-black mix-blend-multiply flex items-center justify-center">
+        <h1 ref={textRef} className="vidDarpan font-bebas text-[15rem] font-bold text-white tracking-wider">
           {siteConfig.eventName}
         </h1>
       </div>

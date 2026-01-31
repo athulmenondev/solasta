@@ -13,6 +13,6 @@ export const siteConfig = {
     },
     tagline: "TECH FEST",
     contactEmail: "contact@nssce.ac.in",
-    logoUrl: "/Darpan.png", // Keep for now
+    logoUrl: "/Solasta.png", // Keep for now
     targetDate: "2026-02-20T00:00:00" // For countdown
 };

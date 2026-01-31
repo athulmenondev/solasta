@@ -114,7 +114,7 @@ function Team(props) {
 export default Team;
 
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), "/teams.json");
+  const filePath = path.join(process.cwd(), "/contact.json");
   const jsonData = await fsPromises.readFile(filePath);
   const objectData = JSON.parse(jsonData);
 
