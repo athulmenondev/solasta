@@ -87,9 +87,23 @@ function Hero() {
           ref={subtitleRef}
           className="font-clash flex flex-wrap opacity-0 drop-shadow-2xl md:ml-4 lg:ml-8"
         >
-          <span className="text-[3.5rem] sm:text-[6rem] md:text-[9rem] lg:text-[12rem] text-white font-extrabold uppercase">
+          <span className="lg:hidden text-[3.5rem] sm:text-[6rem] md:text-[9rem] lg:text-[12rem] text-white font-extrabold uppercase">
             {siteConfig.eventName}
           </span>
+          <div className="hidden lg:block relative font-bold uppercase">
+            <video
+              className="absolute inset-0 w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              <source src="/marvel.mp4" type="video/mp4" />
+            </video>
+            <span className="relative z-10 block bg-black mix-blend-multiply text-[12rem] text-white font-extrabold uppercase p-2">
+              {siteConfig.eventName}
+            </span>
+          </div>
 
           <span className="text-white relative top-[-3rem] font-chakra text-[7rem] md:text-[9rem] opacity-80 font-extrabold">
             {siteConfig.eventYear}

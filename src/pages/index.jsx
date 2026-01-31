@@ -13,8 +13,6 @@ import gsap from "gsap";
 import fsPromises from "fs/promises";
 import path from "path";
 import RitModel from "@/components/RitModel";
-import EventSlider from "@/components/EventSlider";
-import Partical from "@/components/Partical";
 import { siteConfig } from "@/config/site";
 
 const Home = () => {
