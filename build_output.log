@@ -1,0 +1,152 @@
+
+> darpan@0.1.0 build
+> next build
+
+info  - Linting and checking validity of types...
+info  - Creating an optimized production build...
+info  - Compiled successfully
+info  - Collecting page data...
+info  - Generating static pages (0/55)
+
+Error occurred prerendering page "/events/reelMaking". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read properties of undefined (reading 'rule1')
+    at getStaticProps (/home/athul/Files/Projects/Darpan/.next/server/pages/events/[id].js:379:31)
+    at async renderToHTML (/home/athul/Files/Projects/Darpan/node_modules/next/dist/server/render.js:389:20)
+    at async /home/athul/Files/Projects/Darpan/node_modules/next/dist/export/worker.js:354:36
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+
+Error occurred prerendering page "/events/debate". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read properties of undefined (reading 'rule1')
+    at getStaticProps (/home/athul/Files/Projects/Darpan/.next/server/pages/events/[id].js:379:31)
+    at async renderToHTML (/home/athul/Files/Projects/Darpan/node_modules/next/dist/server/render.js:389:20)
+    at async /home/athul/Files/Projects/Darpan/node_modules/next/dist/export/worker.js:354:36
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+
+Error occurred prerendering page "/events/culturals". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read properties of undefined (reading 'rule1')
+    at getStaticProps (/home/athul/Files/Projects/Darpan/.next/server/pages/events/[id].js:379:31)
+    at async renderToHTML (/home/athul/Files/Projects/Darpan/node_modules/next/dist/server/render.js:389:20)
+    at async /home/athul/Files/Projects/Darpan/node_modules/next/dist/export/worker.js:354:36
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+info  - Generating static pages (13/55)
+
+Error occurred prerendering page "/events/ctfIntro". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read properties of undefined (reading 'rule1')
+    at getStaticProps (/home/athul/Files/Projects/Darpan/.next/server/pages/events/[id].js:379:31)
+    at async renderToHTML (/home/athul/Files/Projects/Darpan/node_modules/next/dist/server/render.js:389:20)
+    at async /home/athul/Files/Projects/Darpan/node_modules/next/dist/export/worker.js:354:36
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+
+Error occurred prerendering page "/events/ctf". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read properties of undefined (reading 'rule1')
+    at getStaticProps (/home/athul/Files/Projects/Darpan/.next/server/pages/events/[id].js:379:31)
+    at async renderToHTML (/home/athul/Files/Projects/Darpan/node_modules/next/dist/server/render.js:389:20)
+    at async /home/athul/Files/Projects/Darpan/node_modules/next/dist/export/worker.js:354:36
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+
+Error occurred prerendering page "/events/1vs1Coding". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read properties of undefined (reading 'rule1')
+    at getStaticProps (/home/athul/Files/Projects/Darpan/.next/server/pages/events/[id].js:379:31)
+    at async renderToHTML (/home/athul/Files/Projects/Darpan/node_modules/next/dist/server/render.js:389:20)
+    at async /home/athul/Files/Projects/Darpan/node_modules/next/dist/export/worker.js:354:36
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+
+Error occurred prerendering page "/events/techQuiz". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read properties of undefined (reading 'rule1')
+    at getStaticProps (/home/athul/Files/Projects/Darpan/.next/server/pages/events/[id].js:379:31)
+    at async renderToHTML (/home/athul/Files/Projects/Darpan/node_modules/next/dist/server/render.js:389:20)
+    at async /home/athul/Files/Projects/Darpan/node_modules/next/dist/export/worker.js:354:36
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+
+Error occurred prerendering page "/events/wikichase". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read properties of undefined (reading 'rule1')
+    at getStaticProps (/home/athul/Files/Projects/Darpan/.next/server/pages/events/[id].js:379:31)
+    at async renderToHTML (/home/athul/Files/Projects/Darpan/node_modules/next/dist/server/render.js:389:20)
+    at async /home/athul/Files/Projects/Darpan/node_modules/next/dist/export/worker.js:354:36
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+
+Error occurred prerendering page "/events/blindCoding". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read properties of undefined (reading 'rule1')
+    at getStaticProps (/home/athul/Files/Projects/Darpan/.next/server/pages/events/[id].js:379:31)
+    at async renderToHTML (/home/athul/Files/Projects/Darpan/node_modules/next/dist/server/render.js:389:20)
+    at async /home/athul/Files/Projects/Darpan/node_modules/next/dist/export/worker.js:354:36
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+
+Error occurred prerendering page "/events/innovationAuction". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read properties of undefined (reading 'rule1')
+    at getStaticProps (/home/athul/Files/Projects/Darpan/.next/server/pages/events/[id].js:379:31)
+    at async renderToHTML (/home/athul/Files/Projects/Darpan/node_modules/next/dist/server/render.js:389:20)
+    at async /home/athul/Files/Projects/Darpan/node_modules/next/dist/export/worker.js:354:36
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+
+Error occurred prerendering page "/events/exhibition". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read properties of undefined (reading 'rule1')
+    at getStaticProps (/home/athul/Files/Projects/Darpan/.next/server/pages/events/[id].js:379:31)
+    at async renderToHTML (/home/athul/Files/Projects/Darpan/node_modules/next/dist/server/render.js:389:20)
+    at async /home/athul/Files/Projects/Darpan/node_modules/next/dist/export/worker.js:354:36
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+info  - Generating static pages (27/55)
+
+Error occurred prerendering page "/events/murderMystery". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read properties of undefined (reading 'rule1')
+    at getStaticProps (/home/athul/Files/Projects/Darpan/.next/server/pages/events/[id].js:379:31)
+    at async renderToHTML (/home/athul/Files/Projects/Darpan/node_modules/next/dist/server/render.js:389:20)
+    at async /home/athul/Files/Projects/Darpan/node_modules/next/dist/export/worker.js:354:36
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+
+Error occurred prerendering page "/events/lanGaming". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read properties of undefined (reading 'rule1')
+    at getStaticProps (/home/athul/Files/Projects/Darpan/.next/server/pages/events/[id].js:379:31)
+    at async renderToHTML (/home/athul/Files/Projects/Darpan/node_modules/next/dist/server/render.js:389:20)
+    at async /home/athul/Files/Projects/Darpan/node_modules/next/dist/export/worker.js:354:36
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+
+Error occurred prerendering page "/events/efootball". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read properties of undefined (reading 'rule1')
+    at getStaticProps (/home/athul/Files/Projects/Darpan/.next/server/pages/events/[id].js:379:31)
+    at async renderToHTML (/home/athul/Files/Projects/Darpan/node_modules/next/dist/server/render.js:389:20)
+    at async /home/athul/Files/Projects/Darpan/node_modules/next/dist/export/worker.js:354:36
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+info  - Generating static pages (41/55)
+
+Error occurred prerendering page "/events/workshopGeneral". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read properties of undefined (reading 'rule1')
+    at getStaticProps (/home/athul/Files/Projects/Darpan/.next/server/pages/events/[id].js:379:31)
+    at async renderToHTML (/home/athul/Files/Projects/Darpan/node_modules/next/dist/server/render.js:389:20)
+    at async /home/athul/Files/Projects/Darpan/node_modules/next/dist/export/worker.js:354:36
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+
+Error occurred prerendering page "/events/zineWorkshop". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read properties of undefined (reading 'rule1')
+    at getStaticProps (/home/athul/Files/Projects/Darpan/.next/server/pages/events/[id].js:379:31)
+    at async renderToHTML (/home/athul/Files/Projects/Darpan/node_modules/next/dist/server/render.js:389:20)
+    at async /home/athul/Files/Projects/Darpan/node_modules/next/dist/export/worker.js:354:36
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+info  - Generating static pages (55/55)
+
+> Build error occurred
+Error: Export encountered errors on following paths:
+	/events/[id]: /events/1vs1Coding
+	/events/[id]: /events/blindCoding
+	/events/[id]: /events/ctf
+	/events/[id]: /events/ctfIntro
+	/events/[id]: /events/culturals
+	/events/[id]: /events/debate
+	/events/[id]: /events/efootball
+	/events/[id]: /events/exhibition
+	/events/[id]: /events/innovationAuction
+	/events/[id]: /events/lanGaming
+	/events/[id]: /events/murderMystery
+	/events/[id]: /events/reelMaking
+	/events/[id]: /events/techQuiz
+	/events/[id]: /events/wikichase
+	/events/[id]: /events/workshopGeneral
+	/events/[id]: /events/zineWorkshop
+    at /home/athul/Files/Projects/Darpan/node_modules/next/dist/export/index.js:425:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+    at async /home/athul/Files/Projects/Darpan/node_modules/next/dist/build/index.js:1422:21
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+    at async /home/athul/Files/Projects/Darpan/node_modules/next/dist/build/index.js:1280:17
+    at async Span.traceAsyncFn (/home/athul/Files/Projects/Darpan/node_modules/next/dist/trace/trace.js:79:20)
+    at async Object.build [as default] (/home/athul/Files/Projects/Darpan/node_modules/next/dist/build/index.js:73:29)
