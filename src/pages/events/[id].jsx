@@ -55,7 +55,7 @@ function EventsDetails(props) {
               className="text-xl font-medium font-clash text-center"
               ref={subtitle}
             >
-              Darpan presents
+              Solasta presents
             </p>
             <h1
               className="text-[3rem] xl:text-[4rem] font-clash font-semibold text-center"
@@ -215,34 +215,34 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      title: post.title,
-      image: post.img,
-      content: post.content,
-      description: post.description,
-      c1name: post.c1name,
-      c1number: post.c1no,
-      c2name: post.c2name,
-      c2number: post.c2no,
-      regfee: post.regfee,
-      pricepool: post.pricepool,
-      enddate: post.enddate,
-      register: post.reg,
-      reglink: post.reglink,
-      reg: post.reg,
-      rulehead: post.ruleheader,
-      rule1: post.rules.rule1,
-      rule2: post.rules.rule2,
-      rule3: post.rules.rule3,
-      rule4: post.rules.rule4,
-      rule5: post.rules.rule5,
-      rule6: post.rules.rule6,
-      rule7: post.rules.rule7,
-      rule8: post.rules.rule8,
-      rule9: post.rules.rule9,
-      rule10: post.rules.rule10,
-      rule11: post.rules.rule11,
-      rule12: post.rules.rule12,
-      rule13: post.rules.rule13,
+      title: post.title || "",
+      image: post.img || "",
+      content: post.content || "",
+      description: post.description || "",
+      c1name: post.c1name || "",
+      c1number: post.c1no || "",
+      c2name: post.c2name || false,
+      c2number: post.c2no || false,
+      regfee: post.regfee || "",
+      pricepool: post.pricepool || false,
+      enddate: post.enddate || "",
+      register: post.reg || "",
+      reglink: post.reglink || "",
+      reg: post.reg || "",
+      rulehead: post.ruleheader || "",
+      rule1: post.rules?.rule1 || null,
+      rule2: post.rules?.rule2 || null,
+      rule3: post.rules?.rule3 || null,
+      rule4: post.rules?.rule4 || null,
+      rule5: post.rules?.rule5 || null,
+      rule6: post.rules?.rule6 || null,
+      rule7: post.rules?.rule7 || null,
+      rule8: post.rules?.rule8 || null,
+      rule9: post.rules?.rule9 || null,
+      rule10: post.rules?.rule10 || null,
+      rule11: post.rules?.rule11 || null,
+      rule12: post.rules?.rule12 || null,
+      rule13: post.rules?.rule13 || null,
     },
   };
 }

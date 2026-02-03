@@ -1,15 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+
 import { Slant as Hamburger } from "hamburger-react";
 import { motion, AnimatePresence } from "framer-motion";
 // import { useAuthContext } from "@/context/auth-context";
 import Navlink from "@/components/Navlink";
 
-import { siteConfig } from "@/config/site";
-
 export default function Header() {
-  const [isVisible, setIsVisible] = React.useState(true);
   const [isOpen, setOpen] = React.useState(false);
   // const { signInWithGoogle, appState, signOut } = useAuthContext();
 

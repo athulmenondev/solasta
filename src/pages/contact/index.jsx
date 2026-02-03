@@ -11,12 +11,12 @@ export default function Contact(props) {
 
   React.useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.to("progress", {
-      value: 100,
-      scrollTrigger: {
-        scrub: 0.5,
-      },
-    });
+    // gsap.to("progress", {
+    //   value: 100,
+    //   scrollTrigger: {
+    //     scrub: 0.5,
+    //   },
+    // });
   }, []);
 
   return (
@@ -29,7 +29,7 @@ export default function Contact(props) {
       <main className='pt-[5.5rem] bg-[url("/signup.jpg")] h-full'>
         <div className="flex flex-col text-center items-center justify-center h-full gap-2">
           <h1 className="text-5xl text-white font-clash font-semibold">
-            Darpan' 23&nbsp; Contact
+            Solasta' 26&nbsp; Contact
           </h1>
           <p className="text-2xl text-white font-clash">
             Feel free to contact us

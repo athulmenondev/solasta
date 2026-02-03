@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,7 +10,7 @@ import gsap from "gsap";
 import Reveal from "@/components/Reveal";
 import { ScrollTrigger } from "gsap/dist/all";
 
-export default function Events({ posts, names }) {
+export default function Events({ posts }) {
   const allPosts = posts.flat();
   const animate = useRef(null);
 

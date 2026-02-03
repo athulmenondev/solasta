@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-export default function InitialLoader({ onComplete }) {
+export default function InitialLoader() {
   const [logs, setLogs] = useState([]);
   const [isReady, setIsReady] = useState(false);
   const bottomRef = useRef(null);
 
-  const bootSequence = [
+  useEffect(() => {
+    const bootSequence = [
     "Initializing Solasta Kernal v26.0...",
     "Loading modules...",
     "> [OK] Graphics Engine",
@@ -21,7 +22,6 @@ export default function InitialLoader({ onComplete }) {
     "System Ready.",
   ];
 
-  useEffect(() => {
     let delay = 0;
     bootSequence.forEach((log, index) => {
       delay += Math.random() * 300 + 100;
