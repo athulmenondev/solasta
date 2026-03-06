@@ -38,7 +38,7 @@ const Home = () => {
   const stagger = useRef(null);
 
   return (
-    <div className="bg-black h-fit">
+    <div className="bg-black h-fit w-full max-w-[100vw] overflow-x-hidden">
       <Head>
         <title>{siteConfig.eventName} '26 | {siteConfig.fullCollegeName} Tech Fest</title>
         <meta

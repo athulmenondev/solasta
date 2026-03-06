@@ -57,17 +57,17 @@ function Hero() {
         <h1 ref={title} className="font-chakra sm:text-2xl opacity-0">
           {siteConfig.fullCollegeName} Presents
         </h1>
-        <div ref={subtitle} className="font-clash flex flex-wrap opacity-0">
-          <span className="text-[4.5rem] sm:text-[6.5rem] md:text-[9rem] lg:text-[9rem]">
+        <div ref={subtitle} className="font-clash flex flex-wrap opacity-0 mt-2 sm:mt-0">
+          <span className="text-[2.2rem] sm:text-[6.5rem] md:text-[9rem] lg:text-[9rem] leading-none text-wrap">
             {siteConfig.eventName}
           </span>
-          <span className="text-main_primary relative top-[-3rem] font-chakra text-stroke-cyan text-[7rem] md:text-[9rem]">
+          <span className="text-main_primary relative top-[0] sm:top-[-3rem] font-chakra text-stroke-cyan text-[2.2rem] sm:text-[7rem] md:text-[9rem] ml-2 sm:ml-0 leading-none">
             {siteConfig.eventYear}
           </span>
         </div>
         <span
           ref={subtitle2}
-          className="opacity-0 relative top-[-5rem] text-[3.5rem] sm:text-[5rem] md:text-[7rem] font-clash"
+          className="opacity-0 relative top-[0] sm:top-[-5rem] text-[2rem] sm:text-[5rem] md:text-[7rem] font-clash mt-2 sm:mt-0 block leading-tight text-wrap"
         >
           {siteConfig.tagline}
         </span>

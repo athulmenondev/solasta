@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     <footer className="h-fit flex flex-col border-gray/40 border-t-[1.5px] bg-soothing_black text-white px-0 flex-wrap overflow-hidden">
       <div className="flex flex-wrap">
-        <div className="border-gray/40 border-b-[1.5px] w-full lg:w-[22rem] lg:border-b-0 lg:border-r-[1.5px] flex flex-col p-10 min-w-[18rem] min-h-[14rem] items-start justify-center">
+        <div className="border-gray/40 border-b-[1.5px] w-full lg:w-[22rem] lg:border-b-0 lg:border-r-[1.5px] flex flex-col p-10 min-w-full sm:min-w-[18rem] min-h-[14rem] items-start justify-center">
           <p className="font-ibm text-stone-500">Get in Touch</p>
           <Link
             href={`mailto:${siteConfig.contactEmail}`}
@@ -30,7 +30,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="font-chakra grow-[1] text-white/70 md:grow-0 border-gray/40 border-b-[1.5px] sm:border-b-[1.5px] md:border-r-[1.5px] md:border-b-0 min-w-[21rem] xl:min-w-[25rem] flex flex-col gap-5 p-10 justify-center">
+        <div className="font-chakra grow-[1] text-white/70 md:grow-0 border-gray/40 border-b-[1.5px] sm:border-b-[1.5px] md:border-r-[1.5px] md:border-b-0 min-w-full sm:min-w-[21rem] xl:min-w-[25rem] flex flex-col gap-5 p-10 justify-center">
           <p className="font-semibold text-[25px]">Quick Links</p>
           <div className="flex gap-10 text-[17px] font-chakra">
             <div className="flex flex-col gap-2 w-[6rem]">
@@ -41,15 +41,15 @@ export default function Footer() {
             </div>
             <div className="flex flex-col gap-2">
               <Navlink name={"FAQ"} link={"/#faq"} />
-              <Navlink name={"Connect"} link={"/#connect"} />
+              <Navlink name={"Connect"} link={"#connect"} />
               <Navlink name={"Sponsors"} link={"/#sponsor-pitch"} />
               <Navlink name={"Legacy"} link={"/#legacy-section"} />
             </div>
           </div>
         </div>
 
-        <div className="min-w-[18rem] grow-[1] text-white/70">
-          <div className="flex font-chakra italic justify-between border-gray/40 border-b-[1.5px] lg:border-t-[1.5px] xl:border-t-0 min-h-[7rem] items-center font-bold text-4xl pl-5 pr-4">
+        <div className="min-w-full sm:min-w-[18rem] grow-[1] text-white/70">
+          <div className="flex flex-wrap font-chakra italic justify-between border-gray/40 border-b-[1.5px] lg:border-t-[1.5px] xl:border-t-0 min-h-[7rem] items-center font-bold text-3xl sm:text-4xl pl-5 pr-4 py-4 gap-4">
             <Navlink
               name={`#${siteConfig.eventName}${siteConfig.eventYear}`}
               link={"/"}

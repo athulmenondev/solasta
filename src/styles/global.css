@@ -9,8 +9,9 @@
   --electric-accent: #00f0ff;
 }
 
-html {
+html, body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 * {

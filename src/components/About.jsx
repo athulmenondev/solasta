@@ -60,16 +60,16 @@ export default function About() {
   return (
     <div className="h-fit relative pt-4 px-2 xl:px-20">
       {/* Big reveal text */}
-      <div className="about flex flex-wrap text-white tracking-wide xl:tracking-[.5rem] text-[2.7rem] sm:text-[4.3rem] md:text-[6rem] lg:text-[5.5rem] xl:text-[6.7rem] leading-[3.5rem] md:leading-[6.5rem] xl:leading-[7.5rem] font-clash font-bold mt-16">
+      <div className="about flex flex-wrap text-white tracking-wide xl:tracking-[.5rem] text-[1.8rem] sm:text-[4.3rem] md:text-[6rem] lg:text-[5.5rem] xl:text-[6.7rem] leading-[2rem] sm:leading-[5rem] md:leading-[6.5rem] xl:leading-[7.5rem] font-clash font-bold mt-16 max-w-full">
         <span>You might be</span>
         <span>Thinking what is</span>
         <span
           ref={trigger}
-          className="text-[4rem] sm:text-[5.5rem] md:text-[7.5rem] lg:text-[9.5rem] xl:text-[12.5rem] md:mt-4 lg:mt-12"
+          className="text-[3rem] sm:text-[5.5rem] md:text-[7.5rem] lg:text-[9.5rem] xl:text-[12.5rem] mt-2 md:mt-4 lg:mt-12 w-full sm:w-auto break-words"
         >
           <span className="text-main_primary">{siteConfig.eventName}</span>
         </span>
-        <span className="text-[3.7rem] sm:text-[5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] md:mt-4 lg:mt-8">
+        <span className="text-[3rem] sm:text-[5rem] md:text-[7rem] lg:text-[9rem] xl:text-[12rem] md:mt-4 lg:mt-8 hidden sm:inline-block">
           ?
         </span>
       </div>
@@ -88,7 +88,7 @@ export default function About() {
             celebrates the technical expertise and artistic talents of aspiring
             engineers, featuring competitive coding battles, cybersecurity
             challenges, innovation showcases, creative workshops, and a vibrant
-            cultural night. From the overnight CTF to the Innovation Auction,{" "}
+            cultural night. From the intense 10-hour CTF to the Innovation Auction,{" "}
             <b>
               {siteConfig.eventName}'{siteConfig.eventYear.slice(2)}
             </b>{" "}
@@ -105,8 +105,8 @@ export default function About() {
       </div>
 
       {/* About NSSCE */}
-      <div className="relative mt-20 font-clash font-bold text-white">
-        <span className="flex gap-3 text-[3.3rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] xl:text-[5.5rem]">
+      <div className="relative mt-20 font-clash font-bold text-white max-w-full overflow-hidden">
+        <span className="flex flex-wrap gap-2 text-[1.8rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] xl:text-[5.5rem] leading-none break-words">
           About <Navlink name={"NSSCE"} link={"/#about"} />{" "}
         </span>
       </div>
